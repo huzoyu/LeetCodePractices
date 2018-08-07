@@ -26,6 +26,9 @@ import java.util.Stack;
  * integers within the 32-bit signed integer range: [−231,  231 − 1].
  * For the purpose of this problem, assume that your function
  * returns 0 when the reversed integer overflows.
+ *
+ * 思路：模计算获得尾数，存入队列，符号放入字符串，然后取队列头拼字符串，
+ * 最后转化为int，try\catch一下超出范围报错时返回0.
  */
 
 
