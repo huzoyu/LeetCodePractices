@@ -2,7 +2,6 @@ package com.zhongyu.hu;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 
 /**
  * Given a 32-bit signed integer, reverse digits of an integer.
@@ -27,8 +26,16 @@ import java.util.Stack;
  * For the purpose of this problem, assume that your function
  * returns 0 when the reversed integer overflows.
  *
- * 思路：模计算获得尾数，存入队列，符号放入字符串，然后取队列头拼字符串，
+ * 思路：
+ * 模计算获得尾数，存入队列，符号放入字符串，然后取队列头拼字符串，
  * 最后转化为int，try\catch一下超出范围报错时返回0.
+ *
+ * 耗时：
+ * 21:00 - 22:20
+ *
+ * 总结：
+ * 对数据结构还是不熟悉，前期大量时间耗费在试错上，思路不清晰就开始用栈做，
+ * 转用队列半小时完成，还有部分时间花在溢出的处理上，考虑不全，题目也没说明，就没注意
  */
 
 
