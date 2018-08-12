@@ -49,31 +49,35 @@ import java.util.List;
  * }
  */
 
-public class TwoSumIV {
 
-    public boolean findTarget(TreeNode root, int k) {
-        List<Integer> list = new ArrayList();
-        inorder(root, list);
-        int i = 0, j = list.size() - 1;
-        while(i < j) {
-            int sum = list.get(i) + list.get(j);
-            if(sum < k) {
-                i++;
-            }else if(sum > k) {
-                j--;
-            }else {
-                return true;
-            }
-        }
-        return false;
-    }
+/**
+ * public class TwoSumIV {
+ *
+ *     public boolean findTarget(TreeNode root, int k) {
+ *         List<Integer> list = new ArrayList();
+ *         inorder(root, list);
+ *         int i = 0, j = list.size() - 1;
+ *         while(i < j) {
+ *             int sum = list.get(i) + list.get(j);
+ *             if(sum < k) {
+ *                 i++;
+ *             }else if(sum > k) {
+ *                 j--;
+ *             }else {
+ *                 return true;
+ *             }
+ *         }
+ *         return false;
+ *     }
+ *
+ *     public void inorder(TreeNode root, List<Integer> list) {
+ *         if(root == null) {
+ *             return ;
+ *         }
+ *         inorder(root.left, list);
+ *         list.add(root.val);
+ *         inorder(root.right, list);
+ *     }
+ * }
+ */
 
-    public void inorder(TreeNode root, List<Integer> list) {
-        if(root == null) {
-            return ;
-        }
-        inorder(root.left, list);
-        list.add(root.val);
-        inorder(root.right, list);
-    }
-}
