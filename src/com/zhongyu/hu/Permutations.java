@@ -1,5 +1,8 @@
 package com.zhongyu.hu;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * 46. Permutations
